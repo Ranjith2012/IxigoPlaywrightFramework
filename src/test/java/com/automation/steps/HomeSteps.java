@@ -5,16 +5,18 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
+import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertThat;
+
 public class HomeSteps {
 
     Homepage homepage =  new Homepage();
 
-    @Given("user open the application")
-    public void user_open_the_application() {
+    @Given("user opens the application")
+    public void userOpensTheApplication() {
         homepage.openWebApplication();
     }
     @Then("verify user is  on homepage")
-    public void verify_user_is_on_homepage() {
+    public void verifyUserIsOnHomepage() {
         homepage.verifyUserOnHomePage();
     }
 
@@ -22,5 +24,7 @@ public class HomeSteps {
     public void userClickTheLoginSignupButton() {
         homepage.userClickLoginButton();
     }
+
+
 
 }

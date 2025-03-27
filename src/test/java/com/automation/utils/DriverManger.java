@@ -7,7 +7,8 @@ public class DriverManger {
     static Browser browser;
     static BrowserContext context;
     static Page page;
-    public static void createDriver(){
+
+    public static void createDriver() {
         playwright = Playwright.create();
         browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false));
         context = browser.newContext();
@@ -18,11 +19,11 @@ public class DriverManger {
         return page;
     }
 
-    public static BrowserContext getContext(){
+    public static BrowserContext getContext() {
         return context;
     }
 
-    public static Playwright getDriver(){
+    public static Playwright getDriver() {
         return playwright;
     }
 }

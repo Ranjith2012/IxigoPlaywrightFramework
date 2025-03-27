@@ -7,11 +7,11 @@ public class BasePage {
 
     Page page;
 
-    BasePage(){
+    BasePage() {
         page = DriverManger.getpage();
     }
 
-    public void pause(long val){
+    public void pause(long val) {
         try {
             Thread.sleep(val);
         } catch (InterruptedException e) {
