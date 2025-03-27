@@ -17,4 +17,9 @@ public class LoginSteps {
     public void userClickCountryCodeSelectionOption(String country) {
         loginPage.userSelectCountryCode(country);
     }
+
+    @Then("verify the country code is selected")
+    public void verifyTheCountryCodeIsSelected() {
+        loginPage.verifyCountryCode();
+    }
 }

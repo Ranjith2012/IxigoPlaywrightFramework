@@ -19,4 +19,11 @@ public class BasePage {
         }
     }
 
+    public String extractCountryCode(String text) {
+        if (text != null && text.contains("+")) {
+            return text.substring(text.indexOf("+")); // Extract from '+'
+        }
+        return text;
+    }
+
 }
