@@ -5,4 +5,5 @@ Feature: validate the login country
     When user click the login or signup button
     Then verify user is on loginpage
     When user click country code selection option "Angola"
+    Then verify the country code is selected
 
