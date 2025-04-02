@@ -7,7 +7,7 @@ import com.microsoft.playwright.Page;
 
 import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertThat;
 
-public class Homepage extends BasePage {
+public class HomePage extends BasePage {
 
     Locator closeButton;
     Locator flights;
@@ -16,10 +16,10 @@ public class Homepage extends BasePage {
     Locator moreOption;
     Locator plan;
 
-    public Homepage() {
-        flights     = page.locator("//p[@class='body-sm text-xl' and text()='Flights']");
+    public HomePage() {
+        flights = page.locator("//p[@class='body-sm text-xl' and text()='Flights']");
         loginButton = page.locator("//div[@class='bg-white border-b border-neutral-100 !py-0 w-full z-30 xl:w-full px-20 xl:px-0']//button[text()='Log in/Sign up']");
-        frame       = page.frameLocator("#wiz-iframe-intent");
+        frame = page.frameLocator("#wiz-iframe-intent");
         moreOption = page.locator("//p[@class=\"body-md text-secondary font-medium\"]");
         plan = page.getByText("Plan").first();
     }

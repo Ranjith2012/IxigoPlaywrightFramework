@@ -1,39 +1,39 @@
 package com.automation.steps;
 
-import com.automation.pages.Homepage;
+import com.automation.pages.HomePage;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertThat;
 
 public class HomeSteps {
 
-    Homepage homepage =  new Homepage();
+    HomePage homePage = new HomePage();
 
-    @Given("user opens the application")
-    public void userOpensTheApplication() {
-        homepage.openWebApplication();
+    @Given("user opens website")
+    public void userOpensWebsite() {
+        homePage.openWebApplication();
     }
-    @Then("verify user is  on homepage")
+
+    @Then("verify user is on homepage")
     public void verifyUserIsOnHomepage() {
-        homepage.verifyUserOnHomePage();
+        homePage.verifyUserOnHomePage();
     }
 
     @When("user click the login or signup button")
     public void userClickTheLoginSignupButton() {
-        homepage.userClickLoginButton();
+        homePage.userClickLoginButton();
     }
 
 
     @When("user click more option select Plan")
     public void userClickMoreOptionSelectPlan() {
-        homepage.userHoverToMoreOption();
+        homePage.userHoverToMoreOption();
     }
 
     @And("user click the plan")
     public void userClickThePlan() {
-        homepage.userClickPlan();
+        homePage.userClickPlan();
     }
 }

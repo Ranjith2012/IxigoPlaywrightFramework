@@ -8,7 +8,7 @@ import io.cucumber.java.Before;
 public class Hooks {
 
     @Before
-    public void setUp(){
+    public void setUp() {
         ConfigReader.initConfigReader();
         DriverManger.createDriver();
     }

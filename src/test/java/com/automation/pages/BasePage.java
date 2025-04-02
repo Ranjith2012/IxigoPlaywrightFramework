@@ -3,7 +3,7 @@ package com.automation.pages;
 import com.automation.utils.DriverManger;
 import com.microsoft.playwright.Page;
 
-public class BasePage {
+public abstract class BasePage {
 
     Page page;
 
