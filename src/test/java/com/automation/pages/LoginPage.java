@@ -23,6 +23,7 @@ public class LoginPage extends BasePage{
     public void userSelectCountryCode(String country) {
         countryCode.click();
         countryName = page.locator("//div[@data-testid=\"popover-parent\"]//p[@class=\"body-md flex group-[.list-lg]:body-lg text-primary\"]").all();
+        //user store the displayed country code for before select the country
         selectedCode = extractCountryCode(countryCode.textContent());
         for(Locator s : countryName){
             if(s.textContent().contains(country)){
@@ -34,7 +35,9 @@ public class LoginPage extends BasePage{
     }
 
     public void verifyCountryCode(){
+        //store the country code after selecting
         String updatedCode = extractCountryCode(countryCode.textContent());
+        //validate the country code
         assert !updatedCode.equals(selectedCode);
     }
 }

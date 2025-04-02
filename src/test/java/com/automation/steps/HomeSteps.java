@@ -1,6 +1,7 @@
 package com.automation.steps;
 
 import com.automation.pages.Homepage;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -26,5 +27,13 @@ public class HomeSteps {
     }
 
 
+    @When("user click more option select Plan")
+    public void userClickMoreOptionSelectPlan() {
+        homepage.userHoverToMoreOption();
+    }
 
+    @And("user click the plan")
+    public void userClickThePlan() {
+        homepage.userClickPlan();
+    }
 }

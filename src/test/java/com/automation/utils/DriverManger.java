@@ -2,6 +2,9 @@ package com.automation.utils;
 
 import com.microsoft.playwright.*;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class DriverManger {
     static Playwright playwright;
     static Browser browser;
@@ -9,9 +12,11 @@ public class DriverManger {
     static Page page;
 
     public static void createDriver() {
+        ArrayList arguments = new ArrayList();
+        arguments.add("--start-maximized");
         playwright = Playwright.create();
-        browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false));
-        context = browser.newContext();
+        browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false).setArgs(arguments));
+        context = browser.newContext(new Browser.NewContextOptions().setViewportSize(null));
         page = context.newPage();
     }
 

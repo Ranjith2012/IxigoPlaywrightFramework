@@ -16,6 +16,6 @@ public class Hooks {
     @After
     public void cleanUp() throws InterruptedException {
         Thread.sleep(10000);
-        //DriverManger.getDriver().close();
+        //DriverManger.getContext().close();
     }
 }
